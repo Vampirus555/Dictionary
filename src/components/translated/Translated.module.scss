@@ -1,0 +1,63 @@
+.translated__wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+
+	.translated__info {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+
+		&-text {
+			display: flex;
+			flex-direction: column;
+
+			.word {
+				font-size: var(--fs-elg);
+				color: var(--color-text);
+			}
+
+			.phonetic-text {
+				font-size: var(--fs-lg);
+				color: var(--color-purple);
+			}
+		}
+
+		&-audio {
+			text-align: right;
+			width: 100%;
+
+			.audio__button {
+				position: relative;
+				display: inline-block;
+				background-color: #e7d1f8;
+				width: 64px;
+				height: 64px;
+				border-radius: 50%;
+				border: none;
+				cursor: pointer;
+
+				&::after {
+					position: absolute;
+					content: "";
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+					width: 0px;
+					height: 0px;
+					border-top: 15px solid transparent;
+					border-bottom: 15px solid transparent;
+					border-left: 28px solid var(--color-purple);
+				}
+			}
+
+			:hover {
+				transform: scale(110%);
+				transition: transform 0.5s ease-in;
+			}
+		}
+	}
+}

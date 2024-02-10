@@ -1,0 +1,74 @@
+:root {
+	--fs-sm: 16px;
+	--fs-md: 18px;
+	--fs-lg: 32px;
+	--fs-elg: 56px;
+	--color-purple: #ad5ae6;
+	--color-gray: #757575;
+}
+
+body[theme-mode="dark"] {
+	--color-background: #050505;
+	--color-text: #e8e8e8;
+	--color-ui-change: #ad5ae6;
+}
+
+body[theme-mode="light"] {
+	--color-background: #ffffff;
+	--color-text: #2f2f2f;
+	--color-ui-change: #757575;
+}
+
+body[font-family="serif"] {
+	font-family: serif;
+
+	*,
+	input::placeholder {
+		font-family: serif;
+	}
+}
+
+body[font-family="sans serif"] {
+	font-family: sans-serif;
+
+	*,
+	input::placeholder {
+		font-family: sans-serif;
+	}
+}
+
+body[font-family="mono"] {
+	font-family: monospace;
+
+	*,
+	input::placeholder {
+		font-family: monospace;
+	}
+}
+
+body {
+	margin: 0;
+	background-color: var(--color-background);
+	color: var(--color-text);
+	font-size: var(--fs-md);
+}
+
+.container {
+	max-width: 1180px;
+	margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+	.container {
+		width: 95%;
+		margin: 0 auto;
+	}
+}
+
+.search__wrapper {
+	margin-top: 90px;
+}
+
+.result__wrapper {
+	margin-top: 90px;
+}
